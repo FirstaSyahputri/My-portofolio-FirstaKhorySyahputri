@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Firsta Khory Syahputri</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        /* Smooth Transition Toggle untuk Jendela Modal Detail Proyek */
+        .project-modal { opacity: 0; pointer-events: none; transition: all 0.3s ease-in-out; }
+        .project-modal:target { opacity: 1; pointer-events: auto; }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-[#94a3b8] antialiased selection:bg-blue-500 selection:text-white overflow-x-hidden">
+
+    <!-- GLOW BACKGROUND EFFECT -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none -z-10 overflow-hidden opacity-40">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-[120px]"></div>
+        <div class="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-indigo-500/10 blur-[100px]"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- BRANDED TEXT LOGO -->
+            <a href="#" class="flex items-center group">
+                <span class="text-sm font-extrabold tracking-wider text-white uppercase">My Portofolio</span>
+            </a>
+            <!-- MENU NAVIGASI (TOMBOL SKILLS SUDAH DISAMAKAN) -->
+            <div class="flex items-center gap-6 text-sm font-medium text-slate-400">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: ABOUT ME -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7 space-y-5 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-800/80 border border-slate-700/50 text-blue-400 text-xs font-semibold rounded-full">
+                <span class="w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></span> Open for Growth & Collaboration
+            </div>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                Hi, I'm Firsta Khory Syahputri
+            </h1>
+            <p class="text-base sm:text-lg font-medium text-slate-300">
+                Computer Science Student @ Universitas Pertamina | Analytical Mindset & Detail-Oriented Leader
+            </p>
+            <div class="space-y-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+                <p>Saya adalah seorang individu yang <span class="text-white font-medium">terorganisir, adaptif, dan memiliki rasa ingin tahu yang tinggi</span> terhadap dunia teknologi informasi dan analisis data. Karakter ini membantu saya untuk selalu teliti dalam mengelola integritas data operasional berskala besar maupun dalam merancang arsitektur sistem perangkat lunak yang solutif.</p>
+                <p>Sebagai pribadi yang <span class="text-white font-medium">komunikatif dan berjiwa kepemimpinan</span>, saya sangat menikmati kolaborasi tim dalam memecahkan masalah kompleks. Pengalaman mengoordinasikan berbagai kepanitiaan makro melatih saya untuk tetap tenang di bawah tekanan, adaptif terhadap perubahan dinamis, serta fokus pada pencapaian target yang efisien.</p>
+            </div>
+            
+            <!-- TWO CONTACT BUTTONS (WHATSAPP & GMAIL) -->
+            <div class="flex flex-wrap gap-4 pt-2 justify-center md:justify-start items-center">
+                <!-- Button 1: WhatsApp -->
+                <a href="https://wa.me/6287873460450?text=Halo%20Firsta%2C%20saya%20tertarik%20dengan%20profil%20dan%20portofolio%20Anda." target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-300 shadow-md hover:-translate-y-0.5 group">
+                    <i class="ri-whatsapp-line text-lg group-hover:scale-110 transition-transform"></i> Hubungi via WhatsApp
+                </a>
+                
+                <!-- Button 2: Gmail Direct -->
+                <a href="mailto:firstasyahputri29@gmail.com" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-300 shadow-sm hover:-translate-y-0.5 group">
+                    <i class="ri-mail-send-line text-lg text-blue-400 group-hover:scale-110 transition-transform"></i> Hubungi via Gmail
+                </a>
+            </div>
+        </div>
+
+        <div class="md:col-span-5 flex justify-center">
+            <div class="relative group w-64 h-80 sm:w-72 sm:h-96">
+                <div class="absolute inset-0 bg-blue-500 rounded-3xl rotate-3 scale-102 opacity-10 group-hover:rotate-6 transition-all duration-300"></div>
+                <div class="absolute inset-0 bg-slate-800 rounded-3xl overflow-hidden shadow-xl border-4 border-slate-800 transition-all duration-300 group-hover:scale-[1.01]">
+                    <img src="./ABOUTME.jpg" alt="Firsta Profile" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-4 -left-4 bg-slate-800 border border-slate-700 shadow-xl rounded-xl p-3 flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 font-bold text-sm"><i class="ri-shield-user-line"></i></div>
+                    <div class="text-left"><p class="text-[9px] text-slate-500 font-bold uppercase tracking-wider">Role</p><p class="text-xs font-bold text-white">Secretary @ Pragya Karya</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: EXPERIENCE -->
+    <section id="experience" class="bg-[#0b1329] border-y border-slate-800/80 py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-1">
+                <h2 class="text-3xl font-bold text-white tracking-tight">Professional Experience</h2>
+                <p class="text-slate-400 text-sm">Rekam jejak kontribusi saya dalam industri analisis data & operasional jalan tol.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-7 space-y-8 relative before:absolute before:top-2 before:left-4 before:bottom-2 before:w-0.5 before:bg-slate-800">
+                    <!-- Exp 1 -->
+                    <div class="relative pl-12 group">
+                        <div class="absolute left-2.5 top-2 w-3.5 h-3.5 rounded-full border-2 border-[#0b1329] bg-blue-400 shadow-md"></div>
+                        <div class="bg-slate-900/40 border border-slate-800/50 p-5 rounded-xl transition-all duration-300 hover:border-slate-700/60">
+                            <span class="inline-block text-[10px] font-bold text-blue-400 bg-blue-400/10 border border-blue-400/20 px-2 py-0.5 rounded uppercase tracking-wider">Juli 2025 - Agustus 2025</span>
+                            <h3 class="text-lg font-bold text-white mt-2">Data Entry & Data Analyst Intern</h3>
+                            <p class="text-xs text-slate-400 font-medium">PT Jasamarga Toll Operator (PT CTP Cibitung-Cilincing)</p>
+                            <ul class="mt-3 space-y-2 text-xs text-slate-400 list-none">
+                                <li class="flex items-start gap-2"><i class="ri-checkbox-circle-line text-blue-400 mt-0.5"></i> <span>Mengelola dan memvalidasi keaslian data operasional harian.</span></li>
+                                <li class="flex items-start gap-2"><i class="ri-checkbox-circle-line text-blue-400 mt-0.5"></i> <span>Menganalisis tren performa lapangan melalui monitoring data real-time.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Exp 2 -->
+                    <div class="relative pl-12 group">
+                        <div class="absolute left-2.5 top-2 w-3.5 h-3.5 rounded-full border-2 border-[#0b1329] bg-slate-700 group-hover:bg-indigo-400 shadow-sm"></div>
+                        <div class="bg-slate-900/40 border border-slate-800/50 p-5 rounded-xl transition-all duration-300 hover:border-slate-700/60">
+                            <span class="inline-block text-[10px] font-bold text-slate-400 bg-slate-800 border border-slate-700 px-2 py-0.5 rounded uppercase tracking-wider">Juli 2024 - September 2024</span>
+                            <h3 class="text-lg font-bold text-white mt-2">Data Entry & Data Analyst Intern</h3>
+                            <p class="text-xs text-slate-400 font-medium">PT Jasamarga Toll Operator (PT CTP Cibitung-Cilincing)</p>
+                            <ul class="mt-3 space-y-2 text-xs text-slate-400 list-none">
+                                <li class="flex items-start gap-2"><i class="ri-checkbox-circle-line text-slate-500"></i> <span>Merekapitulasi laporan fisik lapangan ke dalam sistem digital secara sistematis.</span></li>
+                                <li class="flex items-start gap-2"><i class="ri-checkbox-circle-line text-slate-500"></i> <span>Menyusun laporan kinerja operasional berkala guna meminimalkan risiko input.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
+                    <div class="bg-slate-900 border border-slate-800 p-2 rounded-xl">
+                        <img src="./JASAMARGA(1).jpg" alt="Jasa Marga Team" class="w-full h-44 object-cover rounded-lg opacity-85 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 p-2 rounded-xl">
+                        <img src="./JASAMARGA(2).jpg" alt="Jasa Marga Office" class="w-full h-36 object-cover rounded-lg opacity-85 hover:opacity-100 transition duration-300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PROJECTS & MOMENTS -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-1">
+            <h2 class="text-3xl font-bold text-white tracking-tight">Featured Projects & Moments</h2>
+            <p class="text-slate-400 text-sm">Kumpulan produk rekayasa perangkat lunak, perancangan UI/UX, serta dokumentasi milestones (Klik proyek untuk melihat rincian penuh).</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            
+            <!-- Project 1: VisoulGive -->
+            <a href="#modal-visoulgive" class="bg-slate-900/60 border border-slate-800 hover:border-slate-700/80 rounded-2xl overflow-hidden p-5 flex flex-col justify-between transition-all duration-300 group block text-left">
+                <div class="space-y-4">
+                    <div class="overflow-hidden rounded-xl relative">
+                        <img src="./TAMPILANVISOULGIVE.jpg" alt="VisoulGive Mobile" class="w-full h-40 object-cover border border-slate-800 opacity-90 group-hover:scale-102 transition duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-blue-500 flex items-center gap-1.5 shadow-lg"><i class="ri-zoom-in-line"></i> Lihat Proyek Lengkap</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded uppercase tracking-wider">SRS & UI/UX Design</span>
+                        <h3 class="text-lg font-bold text-white mt-1.5 group-hover:text-blue-400 transition-colors">VisoulGive Platform</h3>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">Merancang platform donasi bencana transparan terintegrasi dengan dokumen spesifikasi kebutuhan sistem (SRS) terstruktur.</p>
+                    </div>
+                </div>
+                <img src="./RANCANGANVISOULGIVE.jpg" alt="VisoulGive Wireframe" class="h-10 w-full object-cover rounded border border-slate-800 opacity-40 mt-4">
+            </a>
+
+            <!-- Project 2: KostManager -->
+            <a href="#modal-kostmanager" class="bg-slate-900/90 border border-blue-900/30 hover:border-blue-800/80 rounded-2xl overflow-hidden p-5 flex flex-col justify-between transition-all duration-300 shadow-xl shadow-black/10 group block text-left">
+                <div class="space-y-3">
+                    <div class="relative rounded-xl overflow-hidden border border-slate-800 aspect-video">
+                        <img src="./kostmanager(1).jpg" alt="KostManager Dashboard" class="w-full h-full object-cover border-b border-slate-800">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-blue-500 flex items-center gap-1.5 shadow-lg"><i class="ri-zoom-in-line"></i> Lihat Proyek Lengkap</span>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold px-2 py-0.5 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded uppercase tracking-wider">Web App & Database</span>
+                        <h3 class="text-lg font-bold text-white mt-1.5 group-hover:text-blue-400 transition-colors">KostManager</h3>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                            Aplikasi manajemen tata kelola rumah kos terintegrasi. Digitalisasi pencatatan data penyewa, alokasi status kamar, pembuatan kontrak, hingga transaksi keuangan kasir.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-2 pt-3 mt-4 text-[9px] font-bold text-slate-500 uppercase tracking-wide border-t border-slate-800/60">
+                    <span>PHP MVC</span> • <span>MySQL Relational</span>
+                </div>
+            </a>
+
+            <!-- Project 3: Prom Night Card -->
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden p-5 flex flex-col justify-between hover:border-slate-700/60 transition-all duration-300">
+                <div class="space-y-4">
+                    <img src="./PROM25.jpg" alt="Prom Night Celebration" class="w-full h-40 object-cover rounded-xl border border-slate-800 opacity-90">
+                    <div>
+                        <span class="text-[10px] font-bold px-2 py-0.5 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded uppercase tracking-wider">Campus Life</span>
+                        <h3 class="text-lg font-bold text-white mt-1.5">Prom Night Celebration</h3>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">Sebuah momentum berharga perayaan kebersamaan, apresiasi angkatan, serta perluasan relasi profesional bersama rekan mahasiswa Computer Science.</p>
+                    </div>
+                </div>
+                <div class="text-[10px] font-semibold text-slate-500 pt-3 border-t border-slate-800/60 flex items-center gap-1">
+                    <i class="ri-map-pin-time-line text-purple-400"></i> Campus Milestone
+                </div>
+            </div>
+        </div>
+
+        <!-- TIM SEMINAR BANNER -->
+        <div class="mt-12 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden grid md:grid-cols-12 items-center group shadow-md">
+            <div class="p-6 sm:p-10 md:col-span-6 space-y-3">
+                <div class="inline-flex px-2 py-0.5 bg-blue-500/10 border border-blue-400/20 text-blue-400 text-[10px] font-bold rounded uppercase tracking-wider">Leadership</div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">CITE UP 2025 National IT Committee</h3>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed font-normal">Dipercaya memegang amanah sebagai <span class="text-white font-medium">Head of Event Division</span>. Bertanggung jawab memimpin koordinasi tim makro, menyusun berkala timeline, serta menyukseskan kompetisi IT nasional.</p>
+            </div>
+            <div class="md:col-span-6 h-48 md:h-full min-h-[200px] relative overflow-hidden">
+                <img src="./CU25.jpg" alt="Cite Up Committee" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-102 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-900 via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPANDED HIGH-RES MODALS PANEL -->
+    
+    <!-- 1. Jendela Detail VisoulGive -->
+    <div id="modal-visoulgive" class="project-modal fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <a href="#projects" class="absolute inset-0 cursor-default"></a>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 relative z-10 shadow-2xl my-8 space-y-6">
+            <div class="flex justify-between items-start sticky top-0 bg-slate-900 py-1 border-b border-slate-800/60">
+                <div>
+                    <span class="text-[9px] font-bold px-2 py-0.5 bg-emerald-500/10 text-emerald-400 rounded uppercase tracking-wider">SRS Documentation & Prototype</span>
+                    <h3 class="text-xl font-bold text-white mt-1">VisoulGive Platform Showcase</h3>
+                </div>
+                <a href="#projects" class="text-slate-400 hover:text-white bg-slate-800 border border-slate-700 p-1.5 rounded-xl text-sm transition-colors"><i class="ri-close-line"></i></a>
+            </div>
+            
+            <!-- STACKED HIGH-RES IMAGES GALLERY -->
+            <div class="space-y-4">
+                <div class="space-y-1">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">1. High-Fidelity User Interface Preview</p>
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950">
+                        <img src="./TAMPILANVISOULGIVE.jpg" alt="VisoulGive Mobile View" class="w-full object-contain max-h-[400px] mx-auto">
+                    </div>
+                </div>
+                
+                <div class="space-y-1">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">2. System Architecture & Wireframe Blueprint</p>
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950">
+                        <img src="./RANCANGANVISOULGIVE.jpg" alt="VisoulGive Wireframe View" class="w-full object-contain max-h-[400px] mx-auto">
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300 border-t border-slate-800 pt-4 leading-relaxed">
+                <p class="font-bold text-white">Deskripsi Lengkap Proyek:</p>
+                <p>VisoulGive dikembangkan untuk mengatasi kendala kurangnya akuntabilitas pada penyaluran dana sosial. Sistem dipetakan matang menggunakan metode *software engineering* yang disiplin mulai dari penulisan kebutuhan aktor hingga pembuatan maket visual yang siap diimplementasikan ke tahap *coding* frontend.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800 flex justify-end">
+                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors shadow-sm">Selesai Meninjau</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Jendela Detail KostManager -->
+    <div id="modal-kostmanager" class="project-modal fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <a href="#projects" class="absolute inset-0 cursor-default"></a>
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-3xl w-full p-6 relative z-10 shadow-2xl my-8 space-y-6">
+            <div class="flex justify-between items-start sticky top-0 bg-slate-900 py-1 border-b border-slate-800/60">
+                <div>
+                    <span class="text-[9px] font-bold px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded uppercase tracking-wider">Full-Stack Application Showcase</span>
+                    <h3 class="text-xl font-bold text-white mt-1">KostManager Modules View</h3>
+                </div>
+                <a href="#projects" class="text-slate-400 hover:text-white bg-slate-800 border border-slate-700 p-1.5 rounded-xl text-sm transition-colors"><i class="ri-close-line"></i></a>
+            </div>
+            
+            <!-- STACKED ALL SUB-MODULE IMAGES IN LARGE FORMAT -->
+            <div class="space-y-6 max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
+                <div class="space-y-1">
+                    <p class="text-xs font-bold text-blue-400 uppercase tracking-wider">Main Panel Dashboard</p>
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950 shadow-inner">
+                        <img src="./kostmanager(1).jpg" alt="Dashboard Panel" class="w-full object-cover">
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Room Management Module (Data Kamar)</p>
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950">
+                        <img src="./kostmanager(2).jpg" alt="Modul Kamar" class="w-full object-cover">
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Tenant Database Module (Data Penyewa)</p>
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950">
+                        <img src="./kostmanager(3).jpg" alt="Modul Penyewa" class="w-full object-cover">
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Rental Agreement Registry (Daftar Kontrak Sewa)</p>
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950">
+                        <img src="./kostmanager(4).jpg" alt="Modul Kontrak" class="w-full object-cover">
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Cashier & Payment Invoicing History (Riwayat Pembayaran)</p>
+                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-slate-950">
+                        <img src="./kostmanager(5).jpg" alt="Modul Pembayaran" class="w-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-2 text-xs sm:text-sm text-slate-300 border-t border-slate-800 pt-4 leading-relaxed">
+                <p class="font-bold text-white">Spesifikasi Arsitektur Sistem:</p>
+                <p>Seluruh antarmuka di atas dirancang menggunakan pendekatan yang terstruktur, memisahkan logika query database relasional secara aman untuk mencegah manipulasi data kas operasional hunian kos.</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800 flex justify-end">
+                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-colors shadow-sm">Selesai Meninjau</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 4: SKILLS -->
+    <section id="skills" class="bg-[#0b1329] py-16 border-t border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-4 space-y-2">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Technical Skills & Expertise</h2>
+                <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Kombinasi keahlian teknis pemrograman, arsitektur data, dan rekayasa kebutuhan sistem yang saya kuasai.</p>
+            </div>
+            <div class="lg:col-span-8 grid sm:grid-cols-2 gap-4 text-xs">
+                <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800 space-y-2">
+                    <div class="flex items-center gap-2 text-blue-400 font-bold tracking-wide uppercase text-[10px]">
+                        <i class="ri-code-s-slash-line text-sm"></i><span>Tools & Frameworks</span>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed font-medium">PHP (Laravel), Python, MySQL, Kotlin (Android Studio), Figma (UI/UX Design), Cisco Packet Tracer.</p>
+                </div>
+                <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800 space-y-2">
+                    <div class="flex items-center gap-2 text-emerald-400 font-bold tracking-wide uppercase text-[10px]">
+                        <i class="ri-database-2-line text-sm"></i><span>Domain Expertise</span>
+                    </div>
+                    <p class="text-slate-300 leading-relaxed font-medium">Data Analyst, Requirements Engineering (SRS Documentation), Object-Oriented Programming (OOP), Perancangan Pemetaan Diagram UML.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 bg-[#0f172a] py-8 text-center text-[10px] text-slate-500 font-medium tracking-wider uppercase">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <p>© 2026 Firsta Khory Syahputri. All Rights Reserved.</p>
+            <p class="text-slate-600 normal-case font-normal">Engineered minimally with Tailwind v4 CDN.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
